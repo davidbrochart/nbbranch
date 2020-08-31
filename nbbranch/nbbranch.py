@@ -32,7 +32,10 @@ class Nbbranch(Magics):
     @line_cell_magic
     def ELIF(self, line, cell=None):
         assert self.conditions
-        if self.conditions[-1]:
+        if self.conditions[-1] is None:
+            # one of the previous branches was already taken
+            pass
+        elif self.conditions[-1]:
             # previous branch was taken, all following ones must be ignored
             self.conditions[-1] = None
         else:

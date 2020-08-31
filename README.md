@@ -2,7 +2,7 @@
 
 ## What if you could branch over multiple cells?
 
-You would argue, just merge the cells and use the built-in `if`/`elif`/`else` statements. Except that a cell can have an output (some text, an image, or a widget), and so by branching over multiple cells you can generate several outputs conditionally. In the context of [Voila](https://github.com/voila-dashboards/voila), this means you can e.g. have a dynamically generated dashboard.
+You would argue, just merge the cells and use the built-in Python `if`/`elif`/`else` statements. Except that a cell can have an output (some text, an image, a widget...), and so by branching over multiple cells you can generate several outputs conditionally. In the context of [Voila](https://github.com/voila-dashboards/voila), this means you can e.g. have a dynamically generated dashboard.
 
 ## What does it look like?
 
@@ -57,4 +57,4 @@ A few remarks:
 - These keywords must be prefixed with `%` if the reminder of the cell is empty, or `%%` otherwise (general magic syntax).
 - Indentation is not required (this may change in the future).
 - We need an `%ENDIF` to mark the end of a corresponding `%IF`.
-- Between the outer-most `%IF`/`%ENDIF`, all cells must start with one of `%IF`, `%ELIF` or `%ELSE`. If the cell is just the continuation of the cell above, its first line must be an empty `%%IF`.
+- Between the outer-most `%IF`/`%ENDIF`, all cells must start with one of `%IF`, `%ELIF`, `%ELSE` or `%ENDIF`. If the cell is just the continuation of the cell above, its first line must be an empty `%%IF`.
